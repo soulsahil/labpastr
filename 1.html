@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.json">
+    <title>Offline Web</title>
+  </head>
+  <body>
+    <img class="eclipse" src="startnewproject.jpg" alt="">
+    
+    <span class="text_colorer" id="mySection">
+        <button onclick="copySection()">click to copy <ion-icon name="copy-outline"></ion-icon></button><br><br>
+        #Create Simulator <br>
+        set ns [new Simulator]<br>
+        #Open Trace file and NAM file<br>
+        set ntrace [open prog1.tr w]<br>
+        $ns trace-all $ntrace<br>
+        set namfile [open prog1.nam w]<br>
+        $ns namtrace-all $namfile<br>
+        #Finish Procedure<br>
+        proc Finish {} {<br>
+        global ns ntrace namfile<br>
+        #Dump all the trace data and close the files<br>
+        $ns flush-trace<br>
+        close $ntrace<br>
+        close $namfile<br>
+        #Execute the nam animation file<br>
+        exec nam prog1.nam &<br>
+        #Show the number of packets dropped<br>
+        exec echo "The number of packet drops is " &</span>  
+        <script type="text/javascript" src="copy.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </body>
+</html>
