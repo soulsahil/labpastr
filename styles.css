@@ -1,0 +1,44 @@
+.eclipse{
+    position:absolute;
+    top:0;
+    left:0;
+    height: 122vh;
+    width: 100%;
+    object-fit: cover;
+}
+.text_colorer{
+    position: absolute;
+    top: 100px;
+    left: 370px;
+    color: black;
+    font-family: 'Courier Prime', monospace;
+}
+.text_colorer span{
+    color: #A00000;
+    font-weight: 900;
+}
+.text_colorer a{
+    text-decoration: none;
+}
+.green{
+    color: green;
+}
+.div_text{
+    position: absolute;
+    top: 800px;
+    left: 370px;
+    color: black;
+    font-family: 'Courier Prime', monospace;
+}
+.div_text span{
+    color: black;
+
+}
+.text_colorer button{
+    font-family: 'Courier Prime', monospace;
+    color: #A00000;
+    font-weight: 900;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
